@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  transition: background-color, color;
+  transition-duration: 600ms;
+}
+
+a {
+  height: fit-content;
+  color: inherit;
+  text-decoration: none;
+  line-height: 0;
+}
+
+button {
+  background-color: inherit;
+  font-size: inherit;
+  border: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.quote-box {
+  width: 100%;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 6px;
+}
+
+.quote-box > .quote-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.quote-box > .quote-author {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.quote-box > .quote-author::before {
+  content: "- ";
+}
+
+.quote-box .quote-btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin-top: 1.8rem;
+}
+
+.quote-box > .quote-btn > .tweet-quote > svg {
+  width: 1.2rem;
+  fill: white;
+}
+
+.quote-box > .quote-btn > .btn {
+  color: white;
+  font-family: inherit;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 600ms;
+  transition-timing-function: ease-in-out;
+  user-select: none;
+}
+
+.quote-box > .quote-btn > .btn:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 640px) {
+  .quote-box {
+    max-width: 600px;
+  }
+
+  .quote-box > .quote-text {
+    font-size: 2rem;
+  }
+
+  .quote-box > .quote-author {
+    font-size: 1.4rem;
+  }
+}
